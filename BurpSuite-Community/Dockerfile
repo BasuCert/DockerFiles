@@ -1,3 +1,7 @@
+# Build & Run
+## docker build -t burpff .
+## docker run -v /tmp/.X11-unix/:/tmp/.X11-unix -e DISPLAY=$DISPLAY -p 8080:8080 -it burpff
+
 # Base Image
 FROM openjdk:8-jre-alpine
 
