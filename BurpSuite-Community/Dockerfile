@@ -8,7 +8,7 @@ FROM openjdk:8-jre-alpine
 # Info
 LABEL maintainer "lopqto <morpix@protonmail.com>"
 
-ENV BURP_VERSION 1.7.32
+ENV BURP_VERSION 1.7.33
 
 # Configure
 RUN apk --update add --no-cache dbus ttf-freefont fontconfig openssl ca-certificates ttf-dejavu 
