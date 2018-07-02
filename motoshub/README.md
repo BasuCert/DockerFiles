@@ -16,11 +16,11 @@
 ~$ docker-compose up -d 
 ```
 
-4. open uri and continue installation in your browser:
+4. open URI and continue installation in your browser:
 
 ![database default credentials](/motoshub/screenshots/webinterface-config.png?raw=true)
 
-note: in database config section:
+note: if you have made a change in database config section, use the new information in the next step of the installation:
 ```
 hostname=mariadb
 username=[MYSQL_USER]
