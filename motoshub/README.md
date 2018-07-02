@@ -1,4 +1,4 @@
-# motoshub docker
+# Install [MotoShub](https://shub.ir/) on Docker
 
 ## Installation
 1. You need to install ``docker`` and ``docker-compose`` and then run the following commands:
