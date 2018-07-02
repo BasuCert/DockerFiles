@@ -1,0 +1,25 @@
+version: '3'
+services:
+    php-apache:
+        image: php:7.2.1-apache
+        build:
+            context: ./moto
+        ports:
+            - 80:80
+        links:
+            - 'mariadb'
+
+    mariadb:
+        image: mariadb:10.1
+        volumes:
+            - mariadb:/var/lib/mysql
+        environment:
+            TZ: "Europe/Rome"
+            MYSQL_ALLOW_EMPTY_PASSWORD: "no"
+            MYSQL_ROOT_PASSWORD: "rootpwd"
+            MYSQL_USER: 'motouser'
+            MYSQL_PASSWORD: 'motopassword'
+            MYSQL_DATABASE: 'motodb'
+
+volumes:
+    mariadb:
