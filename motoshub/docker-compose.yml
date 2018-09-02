@@ -8,11 +8,13 @@ services:
             - 80:80
         links:
             - 'mariadb'
+        volumes:
+            - /shub-data/motoshub:/var/www/html
 
     mariadb:
         image: mariadb:10.1
         volumes:
-            - mariadb:/var/lib/mysql
+            - /shub-data/mariadb:/var/lib/mysql
         environment:
             TZ: "Asia/Tehran"
             MYSQL_ALLOW_EMPTY_PASSWORD: "no"
@@ -23,3 +25,4 @@ services:
 
 volumes:
     mariadb:
+    php-apache:
